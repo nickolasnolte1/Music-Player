@@ -35,3 +35,16 @@ class SLinkedList:
         NewNode = Node(newData)
         NewNode.nextval = middle_node.nextval
         middle_node.nextval = NewNode
+        
+        
+timerWorking = False
+timeElapsed = 0
+songupdated = True
+previousSong = ""
+playList = SLinkedList()
+counter = 1
+_songTimer= ""
+_mainThread= ""
+
+for key,value in songListDictionary.items():
+    print(key +" : " + value.strip("\n"))
