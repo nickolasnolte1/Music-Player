@@ -1,3 +1,14 @@
+import threading
+from threading import Timer,Thread,Event
+from pynput.keyboard import Key, Listener
+
+songListDictionary = {}
+counter = 1
+songListFile = open("songList.txt","r")
+for song in songListFile.readlines():
+   songListDictionary[str(counter)] = song
+   counter += 1
+
 class Node:
     def __init__(self, dataval=None):
         self.dataval = dataval
