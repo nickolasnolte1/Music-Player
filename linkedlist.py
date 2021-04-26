@@ -99,9 +99,9 @@ class SongTimer(Thread):
                     self.stopTimer()
                     print("Play List Ended")
                   
-def gotoNext(key):
+    def gotoNext(key):
     global previousSong
-    if key == key.delete:
+    if key.char == 'a':
         try:
             _songTimer.resetTimer()
             previousSong = _songTimer._playList.headval
@@ -110,7 +110,7 @@ def gotoNext(key):
         except Exception as e:
             _songTimer.stopTimer()
             print("Play List Ended")
-    if key == key.insert:
+    if key.char == 'b':
         try:
             _songTimer.resetTimer()
             _songTimer._playList.headval = previousSong
@@ -119,17 +119,35 @@ def gotoNext(key):
             _songTimer.stopTimer()
             #print(e)
             print("Reached Start")
-    if key == key.end:
+    if key.char == 'c':
         try:
             _songTimer.pauseTimer()
             print("Pause")
         except:
             print("error")
 
-    if key == key.home:
+    if key.char == 'd':
         try:
             _songTimer.resumeTimer()
             print("Resume")
         except:
             print("error")
     
+       
+    def Main():
+        global previousSong
+        while True:
+            if(_songTimer._timeElapsed == 5):
+                _songTimer.resetTimer()
+                previousSong = _songTimer._playList.headval
+                _songTimer._playList.headval = _songTimer._playList.headval.nextval
+                _songTimer._songupdated = True
+
+    stopFlag = Event()
+    _mainThread = threading.Thread(target=Main)
+    _songTimer = SongTimer(stopFlag,timerWorking,timeElapsed,playList)
+    _songTimer.start()
+    _songTimer.startTimer()
+    _mainThread.start()
+    with Listener(on_release = gotoNext) as listener:   
+        listener.join()
