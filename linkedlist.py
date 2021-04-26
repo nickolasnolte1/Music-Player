@@ -98,3 +98,38 @@ class SongTimer(Thread):
                 except Exception as e:
                     self.stopTimer()
                     print("Play List Ended")
+                  
+def gotoNext(key):
+    global previousSong
+    if key == key.delete:
+        try:
+            _songTimer.resetTimer()
+            previousSong = _songTimer._playList.headval
+            _songTimer._playList.headval = _songTimer._playList.headval.nextval
+            _songTimer._songupdated = True
+        except Exception as e:
+            _songTimer.stopTimer()
+            print("Play List Ended")
+    if key == key.insert:
+        try:
+            _songTimer.resetTimer()
+            _songTimer._playList.headval = previousSong
+            _songTimer._songupdated = True
+        except Exception as e:
+            _songTimer.stopTimer()
+            #print(e)
+            print("Reached Start")
+    if key == key.end:
+        try:
+            _songTimer.pauseTimer()
+            print("Pause")
+        except:
+            print("error")
+
+    if key == key.home:
+        try:
+            _songTimer.resumeTimer()
+            print("Resume")
+        except:
+            print("error")
+    
