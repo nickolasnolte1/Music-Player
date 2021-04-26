@@ -11,6 +11,7 @@ for song in songListFile.readlines():
    songListDictionary[str(counter)] = song
    counter += 1
 
+   
 class Node:
     def __init__(self, dataval=None):
         self.dataval = dataval
@@ -48,7 +49,6 @@ class SLinkedList:
         NewNode = Node(newData)
         NewNode.nextval = middle_node.nextval
         middle_node.nextval = NewNode
-        
         
 timerWorking = False
 timeElapsed = 0
