@@ -14,7 +14,6 @@ while cicle:
                 ------ 🎶 Music Player 🎶 ------ 
                 1. List of songs 📁
                 2. Create playlist and start listening 🔊
-                3. Exit ❌
 
     """))
 
