@@ -59,6 +59,22 @@ counter = 1
 _songTimer= ""
 _mainThread= ""
 
+for Key,value in songListDictionary.items():
+    print(Key +" : " + value.strip("\n"))
+
+print("")
+print("Make a Play List of 10 songs")
+print("Press: ")
+print("\tNext Song : a")
+print("\tPrevious Song : b")
+print("\tPause : c")
+print("\tResume : d")
+print("")
+songs = int(input("please enter how many songs you want to add to the playlist: "))
+for i in range (songs):
+    songToPlay = input("Enter Song Number: ")
+    playList.AtEnd(songListDictionary[songToPlay])
+
 for key,value in songListDictionary.items():
     print(key +" : " + value.strip("\n"))
       
