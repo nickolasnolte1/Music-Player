@@ -71,7 +71,7 @@ class SongTimer(Thread):
             if(self._timerWoking==True):
                 try:
                     if(self._songupdated):
-                        print(("Playing: "+ self._playList.headval.dataval).strip("\n"))
+                        print(("Now Playing 🔊 : "+ self._playList.headval.dataval).strip("\n"))
                         self._songupdated = False
                     self._timeElapsed += 1
                 except Exception as e:
