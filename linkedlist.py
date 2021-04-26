@@ -74,9 +74,6 @@ songs = int(input("please enter how many songs you want to add to the playlist: 
 for i in range (songs):
     songToPlay = input("Enter Song Number: ")
     playList.AtEnd(songListDictionary[songToPlay])
-
-for key,value in songListDictionary.items():
-    print(key +" : " + value.strip("\n"))
       
 class SongTimer(Thread):
     def __init__(self,event,_timerWoking,_timeElapsed,playList):
@@ -151,7 +148,6 @@ def gotoNext(key):
         except:
             print("error")
     
-       
 def Main():
     global previousSong
     while True:
