@@ -99,7 +99,7 @@ class SongTimer(Thread):
                     self.stopTimer()
                     print("Play List Ended")
                   
-    def gotoNext(key):
+def gotoNext(key):
     global previousSong
     if key.char == 'a':
         try:
@@ -134,20 +134,20 @@ class SongTimer(Thread):
             print("error")
     
        
-    def Main():
-        global previousSong
-        while True:
-            if(_songTimer._timeElapsed == 5):
-                _songTimer.resetTimer()
-                previousSong = _songTimer._playList.headval
-                _songTimer._playList.headval = _songTimer._playList.headval.nextval
-                _songTimer._songupdated = True
+def Main():
+    global previousSong
+    while True:
+        if(_songTimer._timeElapsed == 5):
+            _songTimer.resetTimer()
+            previousSong = _songTimer._playList.headval
+            _songTimer._playList.headval = _songTimer._playList.headval.nextval
+            _songTimer._songupdated = True
 
-    stopFlag = Event()
-    _mainThread = threading.Thread(target=Main)
-    _songTimer = SongTimer(stopFlag,timerWorking,timeElapsed,playList)
-    _songTimer.start()
-    _songTimer.startTimer()
-    _mainThread.start()
-    with Listener(on_release = gotoNext) as listener:   
-        listener.join()
+stopFlag = Event()
+_mainThread = threading.Thread(target=Main)
+_songTimer = SongTimer(stopFlag,timerWorking,timeElapsed,playList)
+_songTimer.start()
+_songTimer.startTimer()
+_mainThread.start()
+with Listener(on_release = gotoNext) as listener:   
+    listener.join()
