@@ -20,6 +20,4 @@ Siguiente a esto, mostramos el diagrama de casos de uso y un flowchart que sigue
 Resultados de Profiling en JMeter: 
 <img width="1394" alt="image" src="https://user-images.githubusercontent.com/61555652/116171561-3ce04c00-a6c6-11eb-8c53-1928fa559a73.png">
 
-https://github.com/nickolasnolte1/Music-Player/blob/main/Version%20final/Summary%20report.PNG?raw=true![image](https://user-images.githubusercontent.com/61555652/116171470-15897f00-a6c6-11eb-8686-75278dba86cd.png)
-
 <img width="1394" alt="image" src="https://user-images.githubusercontent.com/61555652/116171608-5386a300-a6c6-11eb-8015-a01bef09e705.png">
