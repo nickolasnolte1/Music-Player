@@ -10,7 +10,7 @@ Las funciones que este programa ofrece son:
 
 El proyecto fue hecho 100% con Python y usando la estructura de Linked Lists. 
 
-## Siguiente a esto, mostramos el diagrama de casos de uso y un flowchart que sigue el programa.
+## Diagrama de casos de uso y Flowchart:
 
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/61555652/116171290-b75c9c00-a6c5-11eb-8271-276fb4c89139.png">
 
