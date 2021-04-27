@@ -10,13 +10,13 @@ Las funciones que este programa ofrece son:
 
 El proyecto fue hecho 100% con Python y usando la estructura de Linked Lists. 
 
-##Siguiente a esto, mostramos el diagrama de casos de uso y un flowchart que sigue el programa.
+## Siguiente a esto, mostramos el diagrama de casos de uso y un flowchart que sigue el programa.
 
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/61555652/116171290-b75c9c00-a6c5-11eb-8271-276fb4c89139.png">
 
 <img width="673" alt="image" src="https://user-images.githubusercontent.com/61555652/116171379-e07d2c80-a6c5-11eb-97b4-717ed120ff53.png">
 
-##Resultados de Profiling en JMeter: 
+## Resultados de Profiling en JMeter: 
 
 <img width="1394" alt="image" src="https://user-images.githubusercontent.com/61555652/116171561-3ce04c00-a6c6-11eb-8c53-1928fa559a73.png">
 
