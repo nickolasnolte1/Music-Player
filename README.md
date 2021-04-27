@@ -7,5 +7,7 @@ Las funciones que este programa ofrece son:
   - Regresar a canciones anteriores
   - Pausar una canción 
   - Resumir una canción
-    
-  
+
+El proyecto fue hecho 100% con Python y usando la estructura de Linked Lists. 
+
+<img width="574" alt="image" src="https://user-images.githubusercontent.com/61555652/116171290-b75c9c00-a6c5-11eb-8271-276fb4c89139.png">
